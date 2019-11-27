@@ -26,7 +26,8 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">rate my ta</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
@@ -45,18 +46,18 @@
       </div>
     </div>
   </nav>
-  
+
   <!-- Masthead -->
 
   <!-- Portfolio Section -->
-  
+
 
   <!-- About Section -->
- 
+
 
   <!-- Contact Section -->
   <section class="page-section" id="contact">
-    <br/><br/>
+    <br /><br />
     <div class="container">
 
       <!-- Contact Section Heading -->
@@ -75,7 +76,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form name="sentMessage" method="POST" name="datasave.php" id="contactForm" novalidate="novalidate">
+          <form name="sentMessage" method="POST" action="datasave.php" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Name</label>
@@ -116,7 +117,7 @@
                 <label>Comment</label>
                 <input class="form-control" name="comment" id="comment" type="text" placeholder="Comments" required="required" data-validation-required-message="Please enter your rating.">
                 <p class="help-block text-danger"></p>
-             </div>
+              </div>
             </div>
             <br>
             <div id="success"></div>
@@ -193,7 +194,6 @@
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>

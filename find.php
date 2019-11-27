@@ -26,7 +26,8 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">rate my ta</a>
-      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
@@ -45,18 +46,18 @@
       </div>
     </div>
   </nav>
-  
+
   <!-- Masthead -->
 
   <!-- Portfolio Section -->
-  
+
 
   <!-- About Section -->
- 
+
 
   <!-- Contact Section -->
   <section class="page-section" id="contact">
-    <br/><br/>
+    <br /><br />
     <div class="container">
 
       <!-- Contact Section Heading -->
@@ -109,7 +110,7 @@
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Find</button>
             </div>
-            <div id="showList">  </div>
+            <div id="showList"> </div>
           </form>
         </div>
       </div>
@@ -180,7 +181,6 @@
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>

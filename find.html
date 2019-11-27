@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Rate</title>
+  <title>Find</title>
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -60,7 +60,7 @@
     <div class="container">
 
       <!-- Contact Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Rate the TA</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Find the TA</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -75,54 +75,41 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form name="sentMessage" id="contactForm" novalidate="novalidate">
+          <form name="sentMessage" method="POST" action="datafind.php" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Name</label>
-                <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter TA's name.">
+                <input class="form-control" name="name" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter TA's name.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Course</label>
-                <input class="form-control" id="course" type="text" placeholder="Course" required="required" data-validation-required-message="Please enter your course.">
+                <input class="form-control" name="course" id="course" type="text" placeholder="Course" required="required" data-validation-required-message="Please enter your course.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Department</label>
-                <input class="form-control" id="department" type="text" placeholder="Department" required="required" data-validation-required-message="Please enter your department.">
+                <input class="form-control" name="department" id="department" type="text" placeholder="Department" required="required" data-validation-required-message="Please enter your department.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Semester</label>
-                <input class="form-control" id="semester" type="text" placeholder="Semester" required="required" data-validation-required-message="Please enter your semester.">
+                <input class="form-control" name="semester" id="semester" type="text" placeholder="Semester" required="required" data-validation-required-message="Please enter your semester.">
                 <p class="help-block text-danger"></p>
               </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Rating</label>
-                <input class="form-control" id="rating" type="text" placeholder="Rating" required="required" data-validation-required-message="Please enter your rating.">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Comment</label>
-                <input class="form-control" id="comment" type="text" placeholder="Comments" required="required" data-validation-required-message="Please enter your rating.">
-                <p class="help-block text-danger"></p>
-             </div>
             </div>
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Submit</button>
+              <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Find</button>
             </div>
+            <div id="showList">  </div>
           </form>
         </div>
       </div>

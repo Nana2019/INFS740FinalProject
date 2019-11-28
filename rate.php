@@ -114,8 +114,8 @@
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Comment</label>
-                <input class="form-control" name="comment" id="comment" type="text" placeholder="Comments" required="required" data-validation-required-message="Please enter your rating.">
+                <label>Comments</label>
+                <input class="form-control" name="comments" id="comments" type="text" placeholder="Comments" required="required" data-validation-required-message="Please enter your rating.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>

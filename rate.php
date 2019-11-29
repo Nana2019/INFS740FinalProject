@@ -25,13 +25,13 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">rate my ta</a>
+      <a class="navbar-brand js-scroll-trigger" href="index.html">rate my ta</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+<!--       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Find Or Rate</a>
@@ -43,7 +43,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </nav>
 
@@ -106,10 +106,18 @@
               </div>
             </div>
             <div class="control-group">
-              <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Rating</label>
-                <input class="form-control" name="rating" id="rating" type="text" placeholder="Rating" required="required" data-validation-required-message="Please enter your rating.">
-                <p class="help-block text-danger"></p>
+              <div class="form-group">
+             
+                <label for="rating">Rating</label>
+                	<select class="form-control" id="rating" name="rating" >
+				        <option>1</option>
+				        <option>2</option>
+				        <option>3</option>
+				        <option>4</option>
+				        <option>5</option>
+			      	</select>
+<!--              <input class="form-control" name="rating" id="rating" type="text" placeholder="Rating" required="required" data-validation-required-message="Please enter your rating.">
+ -->                <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
@@ -139,8 +147,8 @@
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">2215 John Daniel Drive
-            <br>Clark, MO 65243</p>
+          <p class="lead mb-0">4400 University Dr
+            <br>Fairfax, VA 22030</p>
         </div>
 
         <!-- Footer Social Icons -->
@@ -162,9 +170,8 @@
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
-          <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <h4 class="text-uppercase mb-4">About Rate MY TA</h4>
+          <p class="lead mb-0">RATE MY TA is a free to use web-based application created by Guanhua and Na.</p>
         </div>
 
       </div>

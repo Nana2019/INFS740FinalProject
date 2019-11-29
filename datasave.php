@@ -45,19 +45,6 @@
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Find Or Rate</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
     </div>
   </nav>
 
@@ -91,8 +78,7 @@
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Congrats! <h2/> 
-      <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0"> Your rating is accepted!</h3>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Congratulations! <h2/> 
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -102,30 +88,18 @@
         </div>
         <div class="divider-custom-line"></div>
       </div>
-
+      
       <!-- Portfolio Grid Items -->
-      <div class="row">
-        <!-- Portfolio Item 1 -->
-        <div class="col-md-2 col-lg-2">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-            <img class="img-fluid" src="img/portfolio/rateSuccessful.jpg" alt="">
+      <div>
+        <!-- Portfolio Item 1 -->  
+        <div>
+          <div class="portfolio-item mx-auto" >
+            <h2> Your rating is accepted!</h2> <br/>
+            <img class="img-fluid" src="img/portfolio/rateSuccessful.jpg" alt=""> <br/><br/>
+            <a href="find.php">Check your TA's rating</a>
           </div>
         </div>
-
-
-        <!-- Portfolio Item 2 -->
-
-<!--         <div class="col-md-6 col-lg-6">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-            <a href="2.html" target="to_blank"><img class="img-fluid" src="img/portfolio/rate.jpg" alt=""></a>
-
-          </div>
-        </div> -->
-
-
       </div>
-      <!-- /.row -->
-
     </div>
   </section>
 

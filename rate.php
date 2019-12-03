@@ -31,29 +31,6 @@
         Menu
         <i class="fas fa-bars"></i>
       </button>
-<!--       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Find Or Rate</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div> -->
-    </div>
-  </nav>
-
-  <!-- Masthead -->
-
-  <!-- Portfolio Section -->
-
-
-  <!-- About Section -->
-
 
   <!-- Contact Section -->
   <section class="page-section" id="contact">
@@ -76,32 +53,33 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form name="sentMessage" method="POST" action="datasave.php" id="contactForm" novalidate="novalidate">
+          <form name="sentMessage" method="POST" action="datasave.php" id="contactForm" validate="true">
+          <!-- novalidate="novalidate" -->
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Name</label>
-                <input class="form-control" name="name" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter TA's name.">
+                <label>TA's Name</label>
+                <input class="form-control" name="name" id="name" type="text" placeholder="TA's Name" required="" oninvalid="this.setCustomValidity('Please Enter TA's name')">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Course</label>
-                <input class="form-control" name="course" id="course" type="text" placeholder="Course" required="required" data-validation-required-message="Please enter your course.">
+                <input class="form-control" name="course" id="course" type="text" placeholder="Course" required="">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Department</label>
-                <input class="form-control" name="department" id="department" type="text" placeholder="Department" required="required" data-validation-required-message="Please enter your department.">
+                <input class="form-control" name="department" id="department" type="text" placeholder="Department" required="" >
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Semester</label>
-                <input class="form-control" name="semester" id="semester" type="text" placeholder="Semester" required="required" data-validation-required-message="Please enter your semester.">
+                <input class="form-control" name="semester" id="semester" type="text" placeholder="Semester" required="" >
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -110,11 +88,11 @@
              
                 <label for="rating">Rating</label>
                 	<select class="form-control" id="rating" name="rating" >
-				        <option>1</option>
-				        <option>2</option>
-				        <option>3</option>
-				        <option>4</option>
 				        <option>5</option>
+				        <option>4</option>
+				        <option>3</option>
+				        <option>2</option>
+				        <option>1</option>
 			      	</select>
 <!--              <input class="form-control" name="rating" id="rating" type="text" placeholder="Rating" required="required" data-validation-required-message="Please enter your rating.">
  -->                <p class="help-block text-danger"></p>
@@ -123,7 +101,7 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Comments</label>
-                <input class="form-control" name="comments" id="comments" type="text" placeholder="Comments" required="required" data-validation-required-message="Please enter your rating.">
+                <input class="form-control" name="comments" id="comments" type="text" placeholder="Comments"  data-validation-required-message="Please enter your rating.">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -201,6 +179,7 @@
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>

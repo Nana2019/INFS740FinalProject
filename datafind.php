@@ -14,7 +14,7 @@
         $sql.= " department = '$department' AND";
     }
     if($_POST['semester'] != ''){
-        $department=$_POST['semester'];
+        $semester=$_POST['semester'];
         $sql.= " semester = '$semester' AND";
     }
     $sql=substr($sql, 0, strlen($sql)-4);

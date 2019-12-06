@@ -78,7 +78,7 @@
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Congratulations! <h2/> 
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Congratulations! <h2/>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -88,10 +88,10 @@
         </div>
         <div class="divider-custom-line"></div>
       </div>
-      
+
       <!-- Portfolio Grid Items -->
       <div>
-        <!-- Portfolio Item 1 -->  
+        <!-- Portfolio Item 1 -->
         <div>
           <div class="portfolio-item mx-auto" >
             <h2> Your rating is accepted!</h2> <br/>

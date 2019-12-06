@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>RATE MY TA</title>
-
-  <!-- Custom fonts for this theme -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-  <!-- Theme CSS -->
-  <link href="css/freelancer.min.css" rel="stylesheet">
-
-</head>
-
-<body id="page-top">
-
+<?php
+require_once("support.php");
+include "connect.php";
+$topPart = <<<EOBODY
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
@@ -76,50 +56,68 @@
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
 
-      <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><a href="find.php">Find</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-          href="rate.php">Rate</a></h2>
-
-      <!-- Icon Divider -->
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
 
       <!-- Portfolio Grid Items -->
       <div class="row">
         <!-- Portfolio Item 1 -->
         <div class="col-md-6 col-lg-6">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-            <a href="find.php" target="to_blank"><img class="img-fluid" src="img/portfolio/find1.jpg" alt=""></a>
+          <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Log in</h2>
+          <form method="POST" action="{$_SERVER['PHP_SELF']}"> <!super gobal variable>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+              <label>Username: </label>
+              <input class="form-control" id="username" name='username' type="text" placeholder="Username" required="" oninvalid="this.setCustomValidity('Please Enter a user name')">
+              <p class="help-block text-danger"></p>
+            </div>
           </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+              <label>Password: </label>
+              <input class="form-control" id="Password" name='password' type="password" placeholder="Password" required="" oninvalid="this.setCustomValidity('Please Enter a password')">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-xl" name="signInButton" value="Sign In">
+            <input type="reset" class="btn btn-primary btn-xl" name="resetButton1" value="Clear">
+            </div>
+          </form>
         </div>
 
-
-        <!-- Portfolio Item 2 -->
-
         <div class="col-md-6 col-lg-6">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-            <a href="rate.php" target="to_blank"><img class="img-fluid" src="img/portfolio/rate.jpg" alt=""></a>
-
+          <h3 class="page-section-heading text-center text-uppercase text-secondary mb-0">Sign up</h2>
+          <form method="POST" action="{$_SERVER['PHP_SELF']}"> <!super gobal variable>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+              <label>Username: </label>
+              <input class="form-control" id="username" name='newname' type="text" placeholder="Username" required="" oninvalid="this.setCustomValidity('Please Enter a user name')">
+              <p class="help-block text-danger"></p>
+            </div>
           </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+              <label>Password: </label>
+              <input class="form-control" id="password" name='newpassword' type="password" placeholder="Password" required="" oninvalid="this.setCustomValidity('Please Enter password')">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+              <label>Confirm Password: </label>
+              <input class="form-control" id="confirmpassword" name='confirmpassword' type="password" placeholder="Cofirm Password" required="" oninvalid="this.setCustomValidity('Please Enter comfirm password')">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-xl" name="signUpButton" value="Sign Up">
+            <input type="reset" class="btn btn-primary btn-xl" name="resetButton2" value="Clear">
+            </div>
+          </form>
         </div>
 
         <!-- Portfolio Item 3 -->
-        <!-- <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-          </div>
-        </div>
- -->
       </div>
       <!-- /.row -->
 
@@ -282,6 +280,58 @@
   <!-- Custom scripts for this template -->
   <script src="js/freelancer.min.js"></script>
 
-</body>
+EOBODY;
 
-</html>
+$bottomPart = "";
+
+if (isset($_POST["signInButton"])) {
+      $sql= "SELECT * FROM User WHERE ";
+      $username=trim($_POST['username']);
+      $sql.= " username = '$username' AND";
+      $password=trim($_POST['password']);
+      $sql.= " password = '$password' ";
+      $update = $conn->prepare($sql);
+      $update->execute();
+      $results = $update->fetchAll();
+
+    if (count($results) > 0){
+      echo '<script language="javascript">';
+      echo 'alert("You are now successfully sign in !")';
+      echo '</script>';
+      header("Location: index.html");
+      exit;
+    }else{
+        $bottomPart.= "";
+        echo '<script language="javascript">';
+        echo 'alert("Your username or password is invalid")';
+        echo '</script>';
+        header('Location: '.$_SERVER['PHP_SELF']);
+    }
+}
+
+if (isset($_POST["signUpButton"])) {
+      if($_POST['newname'] == '' || $_POST['newpassword'] == ''){
+        echo '<script language="javascript">';
+        echo 'alert("Your user name exists or your enter wrong format of password")';
+        echo '</script>';
+        header('Location: '.$_SERVER['PHP_SELF']);
+      }else{
+        $bottomPart.= "";
+        $newname=trim($_POST['newname']);
+        $newpassword=trim($_POST['newpassword']);
+        $sql = "INSERT INTO User (username, password)
+          VALUES ('$newname' , '$newpassword')";
+          $update = $conn->prepare($sql);
+          $update->execute();
+          $conn = null;
+          echo '<script language="javascript">';
+          echo 'alert("Your registeration is successful, now you can sign in")';
+          echo '</script>';
+          header('Location: '.$_SERVER['PHP_SELF']);
+    }
+}
+
+$body = $topPart.$bottomPart;
+$page = generatePage($body);
+echo $page;
+?>

@@ -1,0 +1,14 @@
+CREATE DATABASE ratemyta;
+USE ratemyta;
+CREATE TABLE tatable(
+    taname VARCHAR(25),
+    course int,
+    department VARCHAR(25),
+    semester VARCHAR(25),
+    rating int,
+    comments VARCHAR(255)
+);
+CREATE TABLE student(
+    username VARCHAR(255),
+    pwd VARCHAR(255)
+);

@@ -285,20 +285,17 @@ EOBODY;
 $bottomPart = "";
 
 if (isset($_POST["signInButton"])) {
-      $sql= "SELECT * FROM User WHERE ";
+      $sql= "SELECT * FROM student WHERE ";
       $username=trim($_POST['username']);
       $sql.= " username = '$username' AND";
       $password=trim($_POST['password']);
-      $sql.= " password = '$password' ";
+      $sql.= " pwd = '$password' ";
       $update = $conn->prepare($sql);
       $update->execute();
       $results = $update->fetchAll();
 
     if (count($results) > 0){
-      echo '<script language="javascript">';
-      echo 'alert("You are now successfully sign in !")';
-      echo '</script>';
-      header("Location: index.html");
+      header("Location: ./index.html");
       exit;
     }else{
         $bottomPart.= "";
@@ -319,7 +316,7 @@ if (isset($_POST["signUpButton"])) {
         $bottomPart.= "";
         $newname=trim($_POST['newname']);
         $newpassword=trim($_POST['newpassword']);
-        $sql = "INSERT INTO User (username, password)
+        $sql = "INSERT INTO student (username, pwd)
           VALUES ('$newname' , '$newpassword')";
           $update = $conn->prepare($sql);
           $update->execute();

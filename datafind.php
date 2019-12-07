@@ -3,7 +3,7 @@
     $sql= "SELECT * FROM tatable WHERE ";
     if($_POST['name'] != ''){
         $name=$_POST['name'];
-        $sql.= "name = '$name' AND";
+        $sql.= "taname = '$name' AND";
     }
     if($_POST['course'] != ''){
         $course=(int)$_POST['course'];
@@ -62,13 +62,13 @@
     </div>
   </nav>
 
- 
+
   <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">your TA list <h2/> 
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">your TA list <h2/>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -78,10 +78,10 @@
         </div>
         <div class="divider-custom-line"></div>
       </div>
-      
+
       <!-- Portfolio Grid Items -->
       <div>
-        <!-- Portfolio Item 1 -->  
+        <!-- Portfolio Item 1 -->
         <div>
           <div>
 	     <table class="table table-striped"><br/>
@@ -96,7 +96,7 @@
 	   	  <?php
 	      	foreach ($results as $temp){
          	 echo "<tr>";
-          	 echo "<td>".$temp['name']."</td> ";
+          	 echo "<td>".$temp['taname']."</td> ";
           	 echo "<td>".$temp['course']."</td> ";
          	 echo "<td>".$temp['department']."</td> ";
           	 echo "<td>".$temp['semester']."</td> ";

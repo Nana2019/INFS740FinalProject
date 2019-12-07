@@ -1,7 +1,6 @@
 <?php
   function generatePage($body, $title="support") {
     $page = <<<EOPAGE
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

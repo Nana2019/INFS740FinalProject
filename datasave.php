@@ -6,7 +6,7 @@
     $semester=$_POST['semester'];
     $rating=(int)$_POST['rating'];
     $comments=$_POST['comments'];
-    $sql = "INSERT INTO tatable (name, course, department, semester, rating, comments)
+    $sql = "INSERT INTO tatable (taname, course, department, semester, rating, comments)
       VALUES ('$name' , '$course', '$department', '$semester', '$rating', '$comments')";
     $update =$conn->prepare($sql);
     $update->execute();
